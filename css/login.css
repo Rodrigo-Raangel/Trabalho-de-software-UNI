@@ -1,0 +1,28 @@
+:root {
+    --azul-pri-cl: #01033e;
+    --azul-sec-cl: #0033ff;
+    --roxo-claro: #817efe;
+    --background-cl: #d4d6e2;
+}
+body{
+    background-color: var(--background-cl);
+    color: var(--azul-sec-cl);
+    .login-container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        .login-form{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--background-cl);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 0px 10px var(--azul-pri-cl);
+            width: 300px;
+            height: 400px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+:root {
+    --azul-pri-cl: #01033e;
+    --azul-sec-cl: #0033ff;
+    --roxo-claro: #817efe;
+    --background-cl: #d4d6e2;
+}
+body{
+    background-color: var(--background-cl);
+    color: var(--azul-sec-cl);
+}
