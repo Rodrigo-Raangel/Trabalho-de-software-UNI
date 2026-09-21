@@ -1,49 +1,23 @@
-:root {
-    --azul-pri-cl: #01033e;
-    --azul-sec-cl: #0033ff;
-    --roxo-claro: #817efe;
-    --background-cl: #d4d6e2;
-}
 body{
     margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrossel{
+    position: relative;
+    width: 50%;
+    height: 90vh;
     background-image: url('../assets/images/login-background.jpg');
     background-size: cover;
-    backdrop-filter: brightness(0.5) saturate(0.7);
-    color: var(--azul-pri-cl);
-    .login-container{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-        .login-form{
-            display: grid;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--background-cl);
-            border-radius: 5px;
-            padding: 40px;
-            box-shadow: 0px 0px 10px var(--azul-pri-cl);
-            width: 300px;
-            height: 400px;
-            input{
-                padding: 20px;
-                border: none;
-            }
-            a{
-                text-decoration: none;
-                text-align: center;
-                padding: 20px;
-                border: none;
-                background-color: var(--roxo-claro);
-                cursor: pointer;
-                color: var(--background-cl);
-                font-weight: bold;
-                border-radius: 15px;
-            }
-            a:hover{
-                background-color: var(--azul-sec-cl);
-            }
-        }
-    }
+    padding: 24px;
+    border-radius: 16px;
+    margin: 35px;
+}
+.form{
+    width: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }

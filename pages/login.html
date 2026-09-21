@@ -2,17 +2,31 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login.css"
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-form">
-            <h1>Portal do Aluno</h1>
-            <input type="text" placeholder="Usuário">
-            <input type="password" placeholder="Senha">
-            <a href="../pages/home.html">Entrar</a>
-        </div>
+    <div class="carrossel">
+        <div class="logo">UNICA</div>
     </div>
+    <div class="form">
+        <h1>Portal do Aluno</h1>
+        <p class="login">Caso já possua uma conta, faça o <a href='#'>Login</a></p>
+        <form>
+            <input type="email" placeholder="Digite seu e-mail aqui">
+            <div class="senha">
+            <input type="password" id='senhaInput'placeholder="Digite sua senha aqui">
+            <span onclick="togglePassword()">👁</span>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        function togglePassword() {
+        const senhaInput = document.querySelector('#senhaInput');
+        senhaInput.type = senhaInput.type === 'password' ? 'text' : 'password';
+        }
+    </script>
 </body>
 </html>
