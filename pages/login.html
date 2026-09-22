@@ -14,7 +14,7 @@
         <h1>Portal do Aluno</h1>
         <p class="login">Insira suas informações para prosseguir</p>
         <form>
-            <input type="email" placeholder="Digite seu e-mail aqui">
+            <input type="email" id="emailInput" placeholder="Digite seu e-mail aqui">
             <div class="senha">
             <input type="password" id='senhaInput'placeholder="Digite sua senha aqui">
             <span class='toggle' onclick="togglePassword()">👁</span>
@@ -29,5 +29,6 @@
         senhaInput.type = senhaInput.type === 'password' ? 'text' : 'password';
         }
     </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
