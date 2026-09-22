@@ -42,8 +42,8 @@ body{
     .login{
         color: var(--neutral-gray);
         font-size: 1.3rem;
-        margin-top: 0;
-        margin-bottom: 50px;
+        margin-top: 10px;
+        margin-bottom: 60px;
         a{
             color: var(--primary-blue);
             text-decoration: none;
@@ -70,6 +70,13 @@ body{
             font-size: 20px;
             bottom: 40.5%;
             left: 89%;
+    }
+    #esqueci{
+        color: #C8C9CE;
+        text-decoration: none;
+    }
+    #esqueci:hover{
+        text-decoration: underline;
     }
     button{
         width: 100%;
