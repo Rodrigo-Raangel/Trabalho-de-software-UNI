@@ -1,10 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Home</title>
-</head>
-<body>
-    <h1>Home</h1>
-</body>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <aside class="barra-lateral">
+      <div class="logo">
+        <p>UNICA</p>
+      </div>
+      <nav>
+        <button class="nav-item active" data-section="home">
+          <i>𖠿</i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-section="curso">
+          <i>✎</i>
+          <span>Curso</span>
+        </button>
+        <button class="nav-item" data-section="financeiro">
+          <i>$</i>
+          <span>Financeiro</span>
+        </button>
+        <button class="nav-item" data-section="noticias">
+          <i>🕮</i>
+          <span>Noticias</span>
+        </button>
+      </nav>
+      <div class="sair">
+        <a class="nav-item" href="login.html"><i>➜]</i><span>Sair</span></a>
+      </div>
+    </aside>
+    <section class="principal active" id="view-home">
+      <h1>Home</h1>
+    </section>
+    <section class="principal" id="view-curso">
+      <h1>Curso</h1>
+    </section>
+    <section class="principal" id="view-financeiro">
+      <h1>Financeiro</h1>
+    </section>
+    <section class="principal" id="view-noticias">
+      <h1>Noticias</h1>
+    </section>
+    <script>
+      const navItems = document.querySelectorAll(".nav-item");
+      const views = document.querySelectorAll(".principal");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const target = item.dataset.section;
+          navItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+          views.forEach((v) => v.classList.remove("active"));
+          document.getElementById("view-" + target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
