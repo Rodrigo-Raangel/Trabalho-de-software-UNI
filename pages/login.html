@@ -1,34 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
     <div class="carrossel">
-        <div class="logo">Seja bem-vindo a UNICA</div>
+      <div class="logo">Seja bem-vindo a UNICA</div>
     </div>
     <div class="form">
-        <h1>Portal do Aluno</h1>
-        <p class="login">Insira suas informações para prosseguir</p>
-        <form>
-            <input type="email" id="emailInput" placeholder="Digite seu e-mail aqui">
-            <div class="senha">
-            <input type="password" id='senhaInput'placeholder="Digite sua senha aqui">
-            <span class='toggle' onclick="togglePassword()">👁</span>
-            </div>
-            <a href="#" id="esqueci">Esqueceu a senha?</a>
-            <button type="submit">Entrar</button>
-        </form>
+      <h1>Portal do Aluno</h1>
+      <p class="login">Insira suas informações para prosseguir</p>
+      <form>
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="Digite seu e-mail aqui"
+        />
+        <div class="senha">
+          <input
+            type="password"
+            id="senhaInput"
+            placeholder="Digite sua senha aqui"
+          />
+          <span class="toggle" onclick="togglePassword()">👁</span>
+        </div>
+        <div class="memoria">
+          <label>
+            <input type="checkbox" id="lembrar" />
+            <span>Lembrar de mim</span>
+          </label>
+          <a href="#" id="esqueci">Esqueceu a senha?</a>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
     </div>
     <script>
-        function togglePassword() {
-        const senhaInput = document.querySelector('#senhaInput');
-        senhaInput.type = senhaInput.type === 'password' ? 'text' : 'password';
-        }
+      function togglePassword() {
+        const senhaInput = document.querySelector("#senhaInput");
+        senhaInput.type = senhaInput.type === "password" ? "text" : "password";
+      }
     </script>
     <script src="../js/main.js"></script>
-</body>
+  </body>
 </html>
