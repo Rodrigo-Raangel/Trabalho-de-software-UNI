@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <aside class="barra-lateral">
+      <div class="logo">
+        <p>UNICA</p>
+      </div>
+      <nav>
+        <button class="nav-item active" data-section="home">
+          𖠿
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-section="curso">
+          ✎
+          <span>Curso</span>
+        </button>
+        <button class="nav-item" data-section="financeiro">
+          $
+          <span>Financeiro</span>
+        </button>
+        <button class="nav-item" data-section="noticias">
+          🕮
+          <span>Noticias</span>
+        </button>
+      </nav>
+      <div class="sair">
+        <a class="nav-item" href="login.html">➜]<span>Sair</span></a>
+      </div>
+    </aside>
+    <section class="principal active" id="view-home">
+      <div class="container-esquerda">
+        <div class="bem-vindo">
+          <p>Bem-vindo(a) ao seu <b>portal do aluno</b></p>
+        </div>
+        <div class="infos-container">
+          <h2>Informações</h2>
+          <div class="informacoes">
+            <div class="infos-banner">
+              <p>CRA=9</p>
+            </div>
+            <div class="infos-banner">
+              <p>Nenhuma pendencia financeira</p>
+            </div>
+            <div class="infos-banner">
+              <p>Nenhuma pendencia financeira</p>
+            </div>
+          </div>
+        </div>
+        <div class="horarios-container">
+          <h2>Horários</h2>
+          <table>
+            <thead>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aula 1</td>
+                <td>Aula 1</td>
+                <td>Aula 1</td>
+                <td>Aula 1</td>
+                <td>Aula 1</td>
+              </tr>
+              <tr>
+                <td>Aula 2</td>
+                <td>Aula 2</td>
+                <td>Aula 2</td>
+                <td>Aula 2</td>
+                <td>Aula 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container-direita">
+        <h1>Noticias</h1>
+      </div>
+    </section>
+    <section class="principal" id="view-curso">
+      <h1>Curso</h1>
+    </section>
+    <section class="principal" id="view-financeiro">
+      <h1>Financeiro</h1>
+    </section>
+    <section class="principal" id="view-noticias">
+      <h1>Noticias</h1>
+    </section>
+    <script>
+      const navItems = document.querySelectorAll(".nav-item");
+      const views = document.querySelectorAll(".principal");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const target = item.dataset.section;
+          navItems.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+          views.forEach((v) => v.classList.remove("active"));
+          document.getElementById("view-" + target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

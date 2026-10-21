@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --primary-blue: #4b43f0;
+  --bg-dark: #111113;
+  --bg-light: #f0f0f3;
+  --neutral-gray: #c8c9ce;
+  --text-dark: #2a2a2e;
+}
+* {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  .barra-lateral {
+    color: var(--neutral-gray);
+    background-color: var(--bg-dark);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    .logo {
+      color: var(--primary-blue);
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: bolder;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 65%;
+    }
+    .nav-item {
+      background-color: var(--bg-dark);
+      color: var(--neutral-gray);
+      font-weight: bold;
+      border: none;
+      width: 90%;
+      height: 50px;
+      margin-top: 30px;
+      padding: 10px 20px;
+      text-align: left;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--text-dark);
+      span {
+        margin-left: 20px;
+      }
+    }
+    .nav-item:hover {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      border: none;
+    }
+    .sair {
+      height: 15%;
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        border-bottom: none;
+        height: 30px;
+        width: 30%;
+        margin-left: 30px;
+      }
+    }
+  }
+  .principal.active {
+    display: flex;
+  }
+  .principal {
+    display: none;
+  }
+  #view-home {
+    width: 100%;
+    height: 100%;
+    .container-esquerda {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg-dark);
+      width: 80%;
+      .bem-vindo {
+        width: 80%;
+        color: var(--bg-dark);
+        font-size: 30px;
+        background-color: var(--neutral-gray);
+        padding: 50px;
+        border-radius: 20px;
+        margin-top: 50px;
+      }
+      .infos-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 30%;
+        h2 {
+          font-size: 2rem;
+          width: 100%;
+          color: var(--bg-light);
+        }
+      }
+      .informacoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 3%;
+        .infos-banner {
+          font-weight: bolder;
+          color: var(--bg-dark);
+          font-size: 1.5rem;
+          background-color: var(--neutral-gray);
+          width: 40%;
+          text-align: center;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 30px;
+          padding: 15px;
+        }
+      }
+      .horarios-container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 35%;
+        h2 {
+          font-size: 2rem;
+          width: 100%;
+          color: var(--bg-light);
+        }
+        table {
+          background-color: var(--neutral-gray);
+          border-collapse: collapse;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          thead {
+            height: 20%;
+            background-color: var(--text-dark);
+            color: var(--bg-light);
+          }
+          th {
+            width: 20%;
+          }
+          th,
+          td {
+            border-left: 2px var(--bg-dark) solid;
+            border-right: 2px var(--bg-dark) solid;
+          }
+          td {
+            color: var(--bg-dark);
+            margin: 10px;
+          }
+        }
+      }
+    }
+    .container-direita {
+      background-color: var(--text-dark);
+      color: var(--bg-light);
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
