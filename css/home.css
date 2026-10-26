@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 :root {
-  --primary-blue: #4b43f0;
+  --primary-blue: #4223d6;
   --bg-dark: #111113;
   --bg-light: #f0f0f3;
   --neutral-gray: #c8c9ce;
@@ -22,67 +22,228 @@ body {
   .barra-lateral {
     color: var(--neutral-gray);
     background-color: var(--bg-dark);
-    width: 300px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
+    border-right: 3px var(--text-dark) solid;
     .logo {
-      color: var(--primary-blue);
+      color: #4223d6;
       height: 20%;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 3rem;
-      font-weight: bolder;
+      font-weight: 900;
     }
     nav {
       display: flex;
       align-items: center;
       flex-direction: column;
       height: 65%;
+      gap: 30px;
     }
     .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: left;
       background-color: var(--bg-dark);
-      color: var(--neutral-gray);
-      font-weight: bold;
+      color: var(--bg-light);
+      font-weight: 800;
       border: none;
       width: 90%;
       height: 50px;
+      padding: 35px 10px;
       border-radius: 10px;
-      margin-top: 30px;
-      padding: 10px 20px;
-      text-align: left;
-      font-size: 1.5rem;
-      border-bottom: 2px solid var(--text-dark);
-      span {
+      p {
+        font-size: 1.5rem;
         margin-left: 20px;
       }
     }
     .nav-item:hover {
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      border: none;
+      background-color: rgba(255, 255, 255, 0.05);
     }
     .sair {
       height: 15%;
       display: flex;
       align-items: center;
+      justify-content: center;
       a {
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         text-decoration: none;
-        border-bottom: none;
-        height: 30px;
-        width: 30%;
-        margin-left: 30px;
+        height: 10%;
+        width: 70%;
+        p {
+          margin-right: 20px;
+        }
       }
+    }
+    .nav-item.active {
+      background-color: rgba(255, 255, 255, 0.101);
     }
   }
   .principal.active {
-    display: block;
+    display: flex;
   }
   .principal {
     display: none;
+  }
+  #view-home {
+    width: 100%;
+    height: 100%;
+    .container-home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg-dark);
+      width: 100%;
+      h1 {
+        color: var(--bg-light);
+        width: 90%;
+        font-size: 2.5rem;
+        border-bottom: 2px solid var(--text-dark);
+      }
+      .bem-vindo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+        height: 40%;
+        color: var(--bg-dark);
+        font-size: 1.5rem;
+        background-color: var(--bg-light);
+        border-radius: 15px;
+        img {
+          width: 100%;
+          height: 90%;
+          border-radius: 15px 15px 0 0;
+        }
+        p {
+          height: 10%;
+          font-weight: 500;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+      .infos-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+        height: 25%;
+        h2 {
+          font-size: 1.5rem;
+          width: 100%;
+          font-weight: 600;
+          color: var(--bg-light);
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
+      }
+      .informacoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 3%;
+        .infos-banner {
+          font-weight: bolder;
+          color: var(--bg-dark);
+          font-size: 1.7rem;
+          background-color: var(--bg-light);
+          width: 40%;
+          text-align: center;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border-radius: 20px;
+          padding: 15px;
+          font-weight: 800;
+          span {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+          }
+        }
+      }
+      .noticias {
+        color: var(--bg-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 75%;
+        h2 {
+          font-size: 1.5rem;
+          width: 100%;
+          font-weight: 600;
+          color: var(--bg-light);
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
+        .noticias-banner {
+          background-color: #1e1e21;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+          border-radius: 10px;
+          .noticia-singular {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-bottom: 10px;
+            .data {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              width: 5%;
+              p {
+                color: #f0f0f3c5;
+                width: 70%;
+                text-align: left;
+                font-size: 0.8rem;
+                margin-bottom: 0;
+                font-weight: 500;
+              }
+              span {
+                width: 70%;
+                margin-top: 3px;
+                margin-bottom: 3px;
+                font-weight: 600;
+                font-size: 1rem;
+                text-align: left;
+              }
+            }
+            .noticia-infos {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              margin: 10px;
+              padding: 10px;
+              border-left: 3px #44444b solid;
+              p {
+                font-size: 1.1rem;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+              span {
+                color: #f0f0f3c5;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
