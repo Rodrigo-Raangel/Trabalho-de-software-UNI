@@ -19,6 +19,7 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  background-color: var(--bg-dark);
   .barra-lateral {
     color: var(--neutral-gray);
     background-color: var(--bg-dark);
@@ -83,28 +84,38 @@ body {
       background-color: rgba(255, 255, 255, 0.101);
     }
   }
+  .principal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+
+    h1 {
+      color: var(--bg-light);
+      width: 90%;
+      font-size: 2.5rem;
+      border-bottom: 2px solid var(--text-dark);
+    }
+  }
   .principal.active {
     display: flex;
   }
-  .principal {
-    display: none;
+  .container-curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
   #view-home {
-    width: 100%;
-    height: 100%;
     .container-home {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: var(--bg-dark);
       width: 100%;
-      h1 {
-        color: var(--bg-light);
-        width: 90%;
-        font-size: 2.5rem;
-        border-bottom: 2px solid var(--text-dark);
-      }
-      .bem-vindo {
+      .bem-vindo-home {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -127,7 +138,7 @@ body {
           font-weight: 700;
         }
       }
-      .infos-container {
+      .infos-container-home {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -143,13 +154,13 @@ body {
           margin-top: 0;
         }
       }
-      .informacoes {
+      .informacoes-home {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         gap: 3%;
-        .infos-banner {
+        .infos-banner-home {
           font-weight: bolder;
           color: var(--bg-dark);
           font-size: 1.7rem;
@@ -171,7 +182,7 @@ body {
           }
         }
       }
-      .noticias {
+      .noticias-home {
         color: var(--bg-light);
         display: flex;
         align-items: center;
@@ -186,7 +197,7 @@ body {
           margin-bottom: 10px;
           margin-top: 0;
         }
-        .noticias-banner {
+        .noticias-banner-home {
           background-color: #1e1e21;
           display: flex;
           align-items: center;
@@ -194,13 +205,13 @@ body {
           flex-direction: column;
           width: 100%;
           border-radius: 10px;
-          .noticia-singular {
+          .noticia-singular-home {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: left;
             margin-bottom: 10px;
-            .data {
+            .data-home {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -223,7 +234,7 @@ body {
                 text-align: left;
               }
             }
-            .noticia-infos {
+            .noticia-infos-home {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -243,6 +254,75 @@ body {
             }
           }
         }
+      }
+    }
+  }
+  #view-curso {
+    .container-curso {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .container-esquerda-curso {
+        height: 100%;
+        width: 60%;
+        .container-atividades-curso {
+          height: 220px;
+          .atividades-curso {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80%;
+            .atividade-curso {
+              width: 100%;
+              height: 100%;
+              text-align: left;
+              background-color: var(--bg-light);
+              color: var(--bg-dark);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              h3 {
+                font-weight: 700;
+                margin-bottom: 0;
+                font-size: 1.3rem;
+              }
+              h4 {
+                font-weight: 600;
+                font-size: 1rem;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+              p {
+                margin-left: 5px;
+                margin-right: 5px;
+                font-weight: 500;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+        .horarios-curso {
+          height: 60%;
+          table {
+            height: 100%;
+            background-color: var(--bg-light);
+            color: var(--bg-dark);
+            border-collapse: collapse;
+          }
+          th,
+          td {
+            width: 17%;
+            border: 1px solid var(--bg-dark);
+            text-align: center;
+          }
+        }
+      }
+      .container-direita-curso {
+        background-color: blue;
+        width: 20%;
       }
     }
   }
