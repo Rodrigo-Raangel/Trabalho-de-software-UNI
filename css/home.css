@@ -259,6 +259,7 @@ body {
   }
   #view-curso {
     .container-curso {
+      height: 100vh;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -315,7 +316,7 @@ body {
           }
         }
         .horarios-curso {
-          height: 60%;
+          height: 50%;
           h2 {
             font-size: 1.5rem;
             width: 100%;
@@ -326,7 +327,6 @@ body {
           }
           table {
             font-size: 1rem;
-            font-weight: 600;
             border-radius: 10px;
             height: 100%;
             background-color: var(--bg-light);
@@ -335,17 +335,32 @@ body {
           }
           th,
           td {
+            font-weight: 500;
             width: 17%;
             border: 2px solid var(--bg-dark);
             text-align: center;
+          }
+          th,
+          .hora {
+            background-color: #313135;
+            color: var(--bg-light);
+            font-weight: 800;
+          }
+          .alt-horario {
+            background-color: #e9e9e9;
           }
         }
       }
       .container-direita-curso {
         width: 30%;
+        height: 100%;
         .materias-curso {
+          height: 100%;
           border-radius: 10px;
-          .materia {
+          .materia,
+          .alt-materia,
+          .rendimento {
+            height: 10%;
             background-color: var(--bg-light);
             color: var(--bg-dark);
             display: flex;
@@ -373,6 +388,19 @@ body {
               span {
                 font-weight: 700;
               }
+            }
+          }
+          .alt-materia {
+            background-color: #e9e9e9;
+          }
+          .rendimento {
+            height: 15%;
+            margin-top: 30px;
+            h3 {
+              font-size: 1.3rem;
+            }
+            p {
+              font-size: 1.2rem;
             }
           }
         }
