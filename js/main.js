@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("emailInput");
   const senhaInput = document.getElementById("senhaInput");
